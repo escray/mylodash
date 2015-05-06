@@ -1,0 +1,29 @@
+{
+  "name": "mylodash",
+  "version": "0.0.0",
+  "description": "Create mylodash Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escray/mylodash.git"
+  },
+  "keywords": [
+    "lodash"
+  ],
+  "author": "zescray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/escray/mylodash/issues"
+  },
+  "homepage": "https://github.com/escray/mylodash",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  },
+  "dependencies": {
+    "lodash": "^3.8.0"
+  }
+}
