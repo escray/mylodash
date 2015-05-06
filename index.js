@@ -19,18 +19,24 @@ _.once = function(fn){
 	}
 }
 
-var _ = require('lodash');
-// var i = 0;
-// function identity(n){
-// 	i = i + 1;
-// 	return n;
-// }
+_.memoize = function(fn, callback){
+	var obj = {};
 
-// memoizedIdentity = memoize(identity);
+	return function(arg){
+		var key = arg;
+		if (callback) {
+			key = callback(arg);
+		};
 
+		if (!obj.hasOwnProperty(key)){
+			obj[key] = fn(arg);
+		}
 
+		return obj[key];
 
-//memoFoo = _.memoize(foo);
+	}
+
+}
 
 module.exports = _;
 

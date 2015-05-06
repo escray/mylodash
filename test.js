@@ -13,3 +13,16 @@ addOnce = once(add1);
 addOnce();
 
 //console.log(i);
+
+function foo(arg){
+	console.log(arg);
+	return arg;
+}
+
+var memo = require("./index.js").memoize;
+
+var memoFoo = memo(foo);
+
+memoFoo(1);
+memoFoo(1);
+memoFoo(2);
